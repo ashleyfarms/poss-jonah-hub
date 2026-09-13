@@ -24,9 +24,10 @@ export const verticals: Vertical[] = [
     id: 'pizza',
     name: 'Best Pizza',
     emoji: '🍕',
-    status: 'soon',
-    scope: 'National when it launches',
-    blurb: 'Slices, pies, and late-night boxes. Whole country, soon as I pack a bigger suitcase.',
+    status: 'live',
+    href: 'https://best-pizza-poss-jonah.netlify.app',
+    scope: 'National US cities (pizza.possjonah.com coming)',
+    blurb: 'Slices, pies, and late-night boxes — city by city across the whole country.',
   },
   {
     id: 'bbq',
