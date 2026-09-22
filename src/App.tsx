@@ -105,9 +105,9 @@ export default function App() {
           <p className="eyebrow">Hey y’all — I’m Poss Jonah</p>
           <h1>Find the best of everything</h1>
           <p className="lede">
-            I wander town to town huntin’ the good stuff. Tea’s live for the South.
-            Best Pizza is live nationwide. BBQ and friends are still packin’
-            their bags.
+            I wander town to town huntin’ the good stuff. Tea’s live for the South,
+            and the rest of the trail — pizza, BBQ, chicken, seafood, burgers, and
+            more — is live nationwide. Pick a ranking and cheer your favorites.
           </p>
         </section>
 
@@ -116,8 +116,8 @@ export default function App() {
             What’s on the trail
           </h2>
           <p className="section-note">
-            Best Tea (South) and Best Pizza (national) are live. The rest are
-            comin’ along.
+            Best Tea covers the South. Everything else below is live nationwide —
+            tap a card and go cheer.
           </p>
           <div className="vertical-grid">
             {verticals.map((vertical) => (
@@ -148,7 +148,7 @@ export default function App() {
           </a>
         </p>
         <p className="site-footer__fine">
-          Tea is Southern. Pizza is national. BBQ and friends join when they launch.
+          Tea is Southern. The rest of the trail is national — all live now.
         </p>
       </footer>
     </div>
