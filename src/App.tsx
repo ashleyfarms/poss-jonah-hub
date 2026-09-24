@@ -146,6 +146,8 @@ export default function App() {
           >
             More apps from Help-Pal
           </a>
+          {' · '}
+          <a href="/privacy.html">Privacy</a>
         </p>
         <p className="site-footer__fine">
           Tea is Southern. The rest of the trail is national — all live now.
