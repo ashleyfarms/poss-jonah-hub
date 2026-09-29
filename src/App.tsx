@@ -109,6 +109,9 @@ export default function App() {
             and the rest of the trail — pizza, BBQ, chicken, seafood, burgers, and
             more — is live nationwide. Pick a ranking and cheer your favorites.
           </p>
+          <p className="lede">
+            <a href="/articles.html">Read the World of the Strange articles →</a>
+          </p>
         </section>
 
         <section className="verticals" aria-labelledby="verticals-heading">
@@ -146,6 +149,10 @@ export default function App() {
           >
             More apps from Help-Pal
           </a>
+          {' · '}
+          <a href="/articles.html">Articles</a>
+          {' · '}
+          <a href="/about.html">About</a>
           {' · '}
           <a href="/privacy.html">Privacy</a>
         </p>
