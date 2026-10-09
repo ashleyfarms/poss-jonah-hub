@@ -59,6 +59,67 @@ function VerticalCard({ vertical }: { vertical: Vertical }) {
   );
 }
 
+const BOOKS = [
+  {
+    title: 'Possum Holler: Three Stories from the Holler',
+    kind: 'Picture book',
+    price: '$12.99',
+    cover: '/book-possum-holler.jpg',
+    w: 440,
+    h: 440,
+    href: 'https://www.amazon.com/dp/B0HMJT12WV?tag=possjonah-20',
+  },
+  {
+    title: 'Possum Holler Coloring Book',
+    kind: 'Coloring book',
+    price: '$9.99',
+    cover: '/book-possum-holler-coloring.jpg',
+    w: 440,
+    h: 569,
+    href: 'https://www.amazon.com/dp/B0HMJYDD7R?tag=possjonah-20',
+  },
+];
+
+function BooksSection() {
+  return (
+    <section className="books" aria-labelledby="books-heading">
+      <h2 id="books-heading" className="section-title">
+        Poss Jonah books
+      </h2>
+      <p className="section-note">Possum Holler stories for kids, in paperback.</p>
+      <div className="book-grid">
+        {BOOKS.map((b) => (
+          <article className="book-card" key={b.href}>
+            <img
+              className="book-card__cover"
+              src={b.cover}
+              alt={`Cover of ${b.title}`}
+              width={b.w}
+              height={b.h}
+              loading="lazy"
+            />
+            <h3 className="book-card__title">{b.title}</h3>
+            <p className="book-card__meta">
+              {b.kind} · {b.price}
+            </p>
+            <a
+              className="book-card__buy"
+              href={b.href}
+              target="_blank"
+              rel="sponsored noopener"
+            >
+              Buy on Amazon
+            </a>
+          </article>
+        ))}
+      </div>
+      <p className="books__disclosure">
+        As an Amazon Associate I earn from qualifying purchases.
+      </p>
+    </section>
+  );
+}
+
 export default function App() {
   return (
     <div className="app-shell">
@@ -128,6 +189,8 @@ export default function App() {
             ))}
           </div>
         </section>
+
+        <BooksSection />
 
         <aside className="more-trail" aria-label="More rankings on the way">
           <p>

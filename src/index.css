@@ -577,3 +577,79 @@ a.vertical-card:hover {
     transform: none;
   }
 }
+
+/* Poss Jonah books (Amazon affiliate) */
+.books {
+  margin-top: 1.6rem;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 18px rgba(70, 140, 230, 0.12);
+}
+
+.book-card__cover {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(26, 39, 68, 0.18);
+}
+
+.book-card__title {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.book-card__meta {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.book-card__buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  margin-top: auto;
+  padding: 0.5rem 0.5rem;
+  border-radius: 999px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  background: linear-gradient(180deg, #ffc14a, #ff9a2e);
+  color: #1a2744;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 3px 0 rgba(180, 90, 0, 0.35);
+}
+
+.book-card__buy:hover,
+.book-card__buy:focus-visible {
+  color: #1a2744;
+  filter: brightness(1.05);
+}
+
+.books__disclosure {
+  margin: 0.75rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
