@@ -113,6 +113,9 @@ function BooksSection() {
           </article>
         ))}
       </div>
+      <a className="books__free" href="/coloring-pages.html">
+        <span aria-hidden="true">🖍️</span> Free coloring pages to print
+      </a>
       <p className="books__disclosure">
         As an Amazon Associate I earn from qualifying purchases.
       </p>
