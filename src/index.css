@@ -676,3 +676,16 @@ a.vertical-card:hover {
   background: #fff4e3;
   color: #8a4b00;
 }
+
+.site-header__books {
+  margin-left: auto;
+  background: #ff9a2e;
+  color: #1d2433;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.site-header__books:hover,
+.site-header__books:focus-visible { background: #ffb35c; }

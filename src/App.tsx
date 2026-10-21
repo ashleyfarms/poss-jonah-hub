@@ -113,6 +113,9 @@ function BooksSection() {
           </article>
         ))}
       </div>
+      <a className="books__free" href="/books.html">
+        See all Poss Jonah books →
+      </a>
       <a className="books__free" href="/coloring-pages.html">
         <span aria-hidden="true">🖍️</span> Free coloring pages to print
       </a>
@@ -147,6 +150,7 @@ export default function App() {
               <span className="brand__by">Best-of rankings, with a lamppost</span>
             </span>
           </div>
+          <a className="site-header__books" href="/books.html">📚 Books</a>
         </div>
       </header>
 
@@ -215,6 +219,8 @@ export default function App() {
           >
             More apps from Help-Pal
           </a>
+          {' · '}
+          <a href="/books.html">Books</a>
           {' · '}
           <a href="/articles.html">Articles</a>
           {' · '}
