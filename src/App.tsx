@@ -150,7 +150,10 @@ export default function App() {
               <span className="brand__by">Best-of rankings, with a lamppost</span>
             </span>
           </div>
-          <a className="site-header__books" href="/books.html">📚 Books</a>
+          <nav className="site-header__links">
+            <a className="site-header__books" href="/books.html">📚 Books</a>
+            <a className="site-header__apps" href="https://help-pal-apps.com">Free Help-Pal apps</a>
+          </nav>
         </div>
       </header>
 
@@ -221,6 +224,8 @@ export default function App() {
           </a>
           {' · '}
           <a href="/books.html">Books</a>
+          {' · '}
+          <a href="https://help-pal-apps.com">Free Help-Pal apps</a>
           {' · '}
           <a href="/articles.html">Articles</a>
           {' · '}

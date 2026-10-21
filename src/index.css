@@ -677,8 +677,29 @@ a.vertical-card:hover {
   color: #8a4b00;
 }
 
-.site-header__books {
+.site-header__links {
   margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.site-header__apps {
+  color: #8a4b00;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #ff9a2e;
+  border-radius: 999px;
+  white-space: nowrap;
+  background: #fff;
+}
+.site-header__apps:hover,
+.site-header__apps:focus-visible { background: #fff3e3; }
+@media (max-width: 480px) {
+  .site-header__books, .site-header__apps { font-size: 0.85rem; padding: 0.4rem 0.7rem; }
+}
+.site-header__books {
   background: #ff9a2e;
   color: #1d2433;
   font-weight: 800;
