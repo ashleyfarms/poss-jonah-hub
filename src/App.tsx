@@ -151,7 +151,7 @@ export default function App() {
             </span>
           </div>
           <nav className="site-header__links">
-            <a className="site-header__books" href="/books.html">📚 Books</a>
+            <a className="site-header__books" href="/books.html">📚 Books</a>{' '}<a className="site-header__books" href="/episodes/">🎬 Videos</a>
             <a className="site-header__apps" href="https://help-pal-apps.com">Free Help-Pal apps</a>
           </nav>
         </div>
@@ -231,7 +231,7 @@ export default function App() {
           {' · '}
           <a href="/about.html">About</a>
           {' · '}
-          <a href="/privacy.html">Privacy</a>
+          <a href="/episodes/">Videos</a>{' · '}<a href="/contact.html">Contact</a>{' · '}<a href="/privacy.html">Privacy</a>
         </p>
         <p className="site-footer__fine">
           Tea is Southern. The rest of the trail is national — all live now.
