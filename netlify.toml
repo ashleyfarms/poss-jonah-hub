@@ -2,8 +2,28 @@
   command = "npm run build"
   publish = "dist"
 
-# SPA fallback
+# No SPA fallback: the homepage is prerendered and every other page is a
+# static file, so unknown paths must return a real 404 (public/404.html).
+
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/videos"
+  to = "/episodes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/videos/"
+  to = "/episodes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/videos.html"
+  to = "/episodes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 301

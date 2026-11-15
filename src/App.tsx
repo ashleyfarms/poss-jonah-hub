@@ -1,6 +1,6 @@
 import { moreOnTheTrail, verticals, type Vertical } from './data/verticals';
 
-const HELP_PAL_COLLECTION_URL = 'https://help-pal-apps.com/our-app-collection';
+const HELP_PAL_COLLECTION_URL = 'https://help-pal-apps.com/apps/';
 
 function formatList(items: string[]): string {
   if (items.length <= 1) return items[0] ?? '';
@@ -80,6 +80,102 @@ const BOOKS = [
   },
 ];
 
+
+const SERIES = [
+  {
+    id: 'weird-history',
+    name: 'Well, That’s Weird: History',
+    text: 'True, odd moments from the past, told short and checked against published sources: a bear who served in the Polish army, a soldier who kept fighting until 1974, the strangest Olympic marathon ever run, and the 19th-century fear that tomatoes were poison.',
+  },
+  {
+    id: 'weird-animals',
+    name: 'Well, That’s Weird: Animals',
+    text: 'Real animals that sound made up, from the axolotl that never grows up to the star-nosed mole, the glow-in-the-dark flying squirrel and the tiny, deadly blue-ringed octopus. Every claim is checked against published science or museum sources.',
+  },
+  {
+    id: 'weird-cryptids',
+    name: 'Well, That’s Weird: Cryptids',
+    text: 'Creatures people report but science has never confirmed. Each story covers where the legend came from, what witnesses said they saw and what a sensible explanation might be, then leaves the verdict to you.',
+  },
+  {
+    id: 'weird-crime',
+    name: 'Well, That’s Weird: Crime',
+    text: 'Odd, non-graphic true-crime stories and courtroom curiosities, like the unsolved D.B. Cooper hijacking and the “bear” that wrecked a Rolls-Royce.',
+  },
+  {
+    id: 'weird-science',
+    name: 'Well, That’s Weird: Science',
+    text: 'Strange but real experiments and discoveries, including the pitch drop experiment, which has dripped only a handful of times since 1927.',
+  },
+  {
+    id: 'i-grandi',
+    name: 'I Grandi: Great Early Recordings',
+    text: 'Public-domain recordings made before 1923 by the first stars of recorded sound, each with a short introduction to the artist and the piece.',
+  },
+];
+
+const FEATURED = [
+  { href: '/episodes/the-bear-who-went-to-war-wojtek.html', title: 'Wojtek, the bear who went to war' },
+  { href: '/episodes/d-b-cooper-he-jumped-out-of-a-plane-with-200-000.html', title: 'D.B. Cooper and the $200,000 jump' },
+  { href: '/episodes/the-1938-martian-panic-might-be-a-myth.html', title: 'The 1938 Martian panic might be a myth' },
+  { href: '/episodes/the-great-tomato-scare.html', title: 'The great tomato scare' },
+  { href: '/episodes/the-axolotl-that-never-grows-up.html', title: 'The axolotl that never grows up' },
+  { href: '/episodes/inky-the-octopus-escapes-to-the-ocean.html', title: 'Inky the octopus escapes to the ocean' },
+  { href: '/hiroo-onoda-lubang.html', title: 'Hiroo Onoda: the soldier whose war lasted until 1974' },
+  { href: '/mona-lisa-theft-1911.html', title: 'The day the Mona Lisa walked out of the Louvre' },
+];
+
+function StoriesSection() {
+  return (
+    <section className="stories" aria-labelledby="stories-heading">
+      <h2 id="stories-heading" className="section-title">
+        Stories from Poss Jonah
+      </h2>
+      <p className="section-note">
+        Poss Jonah is a cartoon possum who leans on a lamppost and tells true
+        stories that sound too strange to be real. Each short video comes with a
+        written article on this site, with the full story told in plain language
+        and the sources listed at the bottom so you can check every fact
+        yourself. The stories are family-friendly and non-graphic. When
+        historians or scientists disagree, the article says so.
+      </p>
+      <div className="series-list">
+        {SERIES.map((s) => (
+          <article className="series-card" key={s.id}>
+            <h3>
+              <a href={`/episodes/#${s.id}`}>{s.name}</a>
+            </h3>
+            <p>{s.text}</p>
+          </article>
+        ))}
+      </div>
+      <h3 className="stories__subhead">Start reading</h3>
+      <ul className="stories__featured">
+        {FEATURED.map((f) => (
+          <li key={f.href}>
+            <a href={f.href}>{f.title}</a>
+          </li>
+        ))}
+      </ul>
+      <p className="section-note">
+        Browse <a href="/episodes/">every video and article</a>, read the{' '}
+        <a href="/articles.html">World of the Strange articles</a>, or learn{' '}
+        <a href="/about.html">more about Poss Jonah</a>.
+      </p>
+      <h3 className="stories__subhead">The best-of rankings</h3>
+      <p className="section-note">
+        Poss Jonah also runs a family of free, fan-driven rankings. Best Tea
+        started it with Southern iced tea, city by city across the South. The
+        trail now covers pizza, burgers, steak, hot dogs, BBQ, fried chicken,
+        seafood, Chinese, Mexican, fast food, burritos, tacos and egg rolls
+        across the United States. Visitors nominate the places they love and
+        cheer for their favorites. The rankings only celebrate the good spots;
+        there are no “worst of” lists.
+      </p>
+    </section>
+  );
+}
+
 function BooksSection() {
   return (
     <section className="books" aria-labelledby="books-heading">
@@ -152,6 +248,7 @@ export default function App() {
           </div>
           <nav className="site-header__links">
             <a className="site-header__books" href="/books.html">📚 Books</a>{' '}<a className="site-header__books" href="/episodes/">🎬 Videos</a>
+            <a className="site-header__books" href="https://shop.possjonah.com">🛍️ Shop</a>
             <a className="site-header__apps" href="https://help-pal-apps.com">Free Help-Pal apps</a>
           </nav>
         </div>
@@ -200,6 +297,8 @@ export default function App() {
           </div>
         </section>
 
+        <StoriesSection />
+
         <BooksSection />
 
         <aside className="more-trail" aria-label="More rankings on the way">
@@ -231,8 +330,19 @@ export default function App() {
           {' · '}
           <a href="/about.html">About</a>
           {' · '}
-          <a href="/episodes/">Videos</a>{' · '}<a href="/contact.html">Contact</a>{' · '}<a href="/privacy.html">Privacy</a>
+          <a href="/episodes/">Videos</a>{' · '}<a href="/contact.html">Contact</a>{' · '}<a href="/privacy.html">Privacy</a>{' · '}<a href="/terms.html">Terms</a>
         </p>
+        <nav className="family-sites" aria-label="Family of sites">
+          <p>
+            <strong>Family of sites:</strong>{' '}
+            <a href="https://shop.possjonah.com">Possum Holler Mercantile</a>{' '}
+            (vintage finds &amp; ornaments){' · '}
+            <a href="https://help-pal-apps.com/">Help-Pal free apps</a>{' · '}
+            <a href="https://www.youtube.com/@PossJonah">Poss Jonah on YouTube</a>{' · '}
+            <a href="https://www.youtube.com/@PossJonahKids">Poss Jonah Kids on YouTube</a>{' · '}
+            <a href="/books.html">Poss Jonah books on Amazon</a>
+          </p>
+        </nav>
         <p className="site-footer__fine">
           Tea is Southern. The rest of the trail is national — all live now.
         </p>
