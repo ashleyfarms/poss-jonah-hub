@@ -61,9 +61,27 @@ function VerticalCard({ vertical }: { vertical: Vertical }) {
 
 const BOOKS = [
   {
+    title: 'The Night Before Christmas: with Poss Jonah and the Possum Holler Friends',
+    kind: 'Hardcover gift book',
+    price: '$25.99',
+    cover: '/book-B0HRR7WZMG.jpg',
+    w: 900,
+    h: 1200,
+    href: 'https://www.amazon.com/dp/B0HRR7WZMG?tag=possjonah-20',
+  },
+  {
+    title: 'Renewed Every Morning: A 365-Day Verse Book for Women',
+    kind: 'Hardcover verse book',
+    price: '$24.99',
+    cover: '/book-B0HRRXTFL8.jpg',
+    w: 782,
+    h: 1200,
+    href: 'https://www.amazon.com/dp/B0HRRXTFL8?tag=possjonah-20',
+  },
+  {
     title: 'Possum Holler: Three Stories from the Holler',
     kind: 'Picture book',
-    price: '$12.99',
+    price: '$9.99',
     cover: '/book-possum-holler.jpg',
     w: 440,
     h: 440,
@@ -72,7 +90,7 @@ const BOOKS = [
   {
     title: 'Possum Holler Coloring Book',
     kind: 'Coloring book',
-    price: '$9.99',
+    price: '$7.99',
     cover: '/book-possum-holler-coloring.jpg',
     w: 440,
     h: 569,
@@ -182,7 +200,7 @@ function BooksSection() {
       <h2 id="books-heading" className="section-title">
         Poss Jonah books
       </h2>
-      <p className="section-note">Possum Holler stories for kids, in paperback.</p>
+      <p className="section-note">Christmas hardcovers, picture books, and coloring books from Poss Jonah. The hardcovers usually ship in about 8–9 days as of Nov 16, so order soon if a copy is meant to be under the tree.</p>
       <div className="book-grid">
         {BOOKS.map((b) => (
           <article className="book-card" key={b.href}>
