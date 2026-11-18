@@ -230,6 +230,12 @@ function BooksSection() {
       <a className="books__free" href="/books.html">
         See all Poss Jonah books →
       </a>
+      <a className="books__free" href="/homeschool-books.html">
+        <span aria-hidden="true">📚</span> Homeschool books &amp; workbooks
+      </a>
+      <a className="books__free" href="/christian-books-for-kids-and-families.html">
+        <span aria-hidden="true">✝️</span> Christian books &amp; Christmas nativity gifts
+      </a>
       <a className="books__free" href="/coloring-pages.html">
         <span aria-hidden="true">🖍️</span> Free coloring pages to print
       </a>
